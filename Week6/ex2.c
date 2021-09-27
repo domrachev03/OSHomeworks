@@ -232,8 +232,8 @@ int main() {
           &processes[i].arrival);
   }
 
-  simulation(n, processes, *FCFS);
+  // simulation(n, processes, *FCFS);
   simulation(n, processes, *shortest_job_first);
-  simulation(n, processes, *RoundRobin);
+  // simulation(n, processes, *RoundRobin);
   return 0;
 }

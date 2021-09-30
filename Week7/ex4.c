@@ -34,8 +34,6 @@ int main() {
     array[i] = i;
   }
 
-  printf("\n");
-
   for (int i = 0; i < 2 * N; ++i) {
     printf("%d ", array[i]);
   }

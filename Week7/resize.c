@@ -43,6 +43,7 @@ int main() {
   }
   printf("\n");
 
+  free(a1);
   // Done with array now, done with program :D
 
   return 0;

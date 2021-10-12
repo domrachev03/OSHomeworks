@@ -1,0 +1,4 @@
+Each page has 8 Kbytes = 2^13 bytes of information.
+Therefore, for storing offset it is needed 13 bytes in virtual address.
+So, there are only 3 bytes to store page size.
+Therefore, there could be only 2^3 = 8 pages in the system

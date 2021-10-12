@@ -1,0 +1,10 @@
+Virtual memory is an abstraction on physical memory. It is needed to provide more
+convinient interface for programs to work with the memory.
+
+Some of differences:
+1. Virtual adresses are unique for each process. And then, they are mapped to physical adress.
+
+2. Virtual adresses can be bigger than memory available. This is possible, since not
+all virtual memory adresses has to be linked with real memory (since it is not used)
+
+

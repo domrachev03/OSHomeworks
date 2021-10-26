@@ -13,14 +13,14 @@
 int MAX_FILES = 100;
 
 struct multipointed {
-  int st_ino;
+  unsigned long st_ino;
   int st_nlink;
   char **file_names;
   int cur_files_found;
 };
 
 char *absolute_path(char *name, char *directory) {
-  printf("Name: %s, Directory: %s\n", name, directory);
+  // printf("Name: %s, Directory: %s\n", name, directory);
 
   if (strcmp(name, ".") == 0 || strcmp(name, "..") == 0) {
     return NULL;
@@ -70,6 +70,7 @@ int main() {
       bool flag = false;
 
       for (int i = 0; i < nduplicates; ++i) {
+        //   printf("%ld %ld\n", duplicates[i].st_ino, cur_stat->st_ino);
         if (duplicates[i].st_ino == cur_stat->st_ino) {
           duplicates[i].file_names[duplicates[i].cur_files_found] =
               cur_file->d_name;
@@ -101,11 +102,13 @@ int main() {
   for (int i = 0; i < nduplicates; ++i) {
     for (int k = 0; k < duplicates[i].cur_files_found; ++k) {
       printf("%s ----------------- ", duplicates[i].file_names[k]);
+
       for (int j = 0; j < duplicates[i].cur_files_found; ++j) {
         printf("%s ", duplicates[i].file_names[j]);
       }
+
+      printf("\n");
     }
-    printf("\n");
   }
   return 0;
 }

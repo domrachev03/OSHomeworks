@@ -1,0 +1,6 @@
+1). 660 permission code will allow user and group to read and write in this file
+
+2). 775 permission code will allow user and group to read, write and execute this file, and
+others will be able to read and execute the file
+
+3). 777 permission code will allow everyone to read, write and modify a file

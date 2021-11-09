@@ -34,5 +34,6 @@
       ffff-ffff : pnp 00:02
 
 dma1 - direct memory access controller. It allows device to temporary access some range of RAM memory
-pic1 - Internet port. It manages hardware interrupts.
+pic1 - programmable interrupt controller. It helps microprocessor or CPU to handle interrupt requests. 
+(ref on the info about pic is Wiki Page: https://en.wikipedia.org/wiki/Programmable_interrupt_controller)
 timer1 - 16 bit timer block. It allows schedule function execution at some certain moment of the time. 

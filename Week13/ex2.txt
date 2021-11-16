@@ -1,0 +1,18 @@
+1. Deadlock recovery
+  It is reasonable to apply deadlock recovery if we know, that process asks for all 
+  resourses at once, since in this case OS can detect the cycle and break it.
+
+2. Deadlock prevention
+  Deadlock prevention works fine, if
+    - Resource could be shared between several processes (deny Mutual-Exclusion)
+    - All processes knows all needed resourses before running (deny Hold-and-Wait)
+    - It is possible to provide extra interface between resourse and its user (i.e. make
+    it virtual) (deny No-Preemption)
+    - There are few resourses available (then we can order them in a fancy way) 
+    (deny Circular Wait)
+
+3. Deadlock avoidance
+  There exists the Banker's Algorithm, which allows to schedule resourse usage so that
+  there won't be any deadlocks presented. It could be applied, if all the used
+  
+  resourses are known in advance.
